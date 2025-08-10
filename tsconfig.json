@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     /* Output and Layout */
-    "target": "ES2020",                      // Modern JS output
-    "module": "commonjs",                    // Node.js compatible
-    "rootDir": "./src",                      // Source folder
-    "outDir": "./dist",                      // Compiled JS output
-    "esModuleInterop": true,                 // Default import compatibility
-    "resolveJsonModule": true,               // Import JSON files
-    "sourceMap": true,                       // Generate .map files
-    "declaration": false,                    // No .d.ts files for production
-    "declarationMap": false,                 // No .d.ts map files for production
+    "target": "ES2020",                         // Modern syntax support
+    "module": "commonjs",                       // For Node.js
+    "rootDir": "./src",                         // Source code location
+    "outDir": "./dist",                         // Compiled JS output
+    "esModuleInterop": true,                    // Allow `import express from 'express'`
+    "resolveJsonModule": true,                  // Allow importing JSON
+    "sourceMap": true,                          // For debugging
+    "declaration": true,
+    "declarationMap": true,
 
     /* Type Support */
-    "lib": ["ES2020"],                        // Environment libs
-    "types": ["node"],                        // Node.js types
-    "skipLibCheck": true,                     // Faster build
+    "lib": ["ES2020"],                          // Environment support
+    "types": ["node", "@types/express"],        // Explicit type support
+    "skipLibCheck": true,
 
     /* Strict Type Checks */
     "strict": true,
@@ -24,7 +24,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Good Practices */
+    /* Other Good Practices */
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
